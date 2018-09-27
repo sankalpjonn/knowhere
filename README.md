@@ -63,7 +63,7 @@ c.keys()
 ```
 
 ## Expiration policy
-knowhere expires keys the same way redis does. You can find it [`here`]('https://redis.io/commands/expire#how-redis-expires-keys'). Specifically, this is what knowhere does on every eviction interval for each shard
+knowhere expires keys the same way redis does. You can find it [`here`](https://redis.io/commands/expire#how-redis-expires-keys). Specifically, this is what knowhere does on every eviction interval for each shard
 * Step 1: Get 20 random keys from the shard
 * Step 2: Delete all the keys which should be expired.
 * Step 3: If more than 4 of the 20 keys were expired, start again from step 1
